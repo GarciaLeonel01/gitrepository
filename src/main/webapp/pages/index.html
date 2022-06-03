@@ -1,0 +1,111 @@
+<!--
+Autor: Leonel Alexis García Juárez
+Fecha de creación:23 de Abril 2022
+Fecha de Actualización: 10 de Mayo de 2022
+Descripción: Crea pagina principal
+-->
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel ="stylesheet" href="../resources/css/css.css">
+    </head>
+    <body>
+        <section>
+            <div class="background">
+                <!--   cabecera de pagina   -->
+                <header class="header">
+                    <a href="" class="logo">AlebrijesShoop</a>
+                    <input class="menu-btn" type="checkbox" id="menu-btn" />
+                    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                    <ul class="menu">
+                        <li><a  class="nav-link" href="../InventarioProductos?action=crearForm">Crear Producto</a></li>
+                        <li><a class="nav-link" href="../InventarioProductos?action=listar">Lista de Productos</a></li>
+                        <li><a class="nav-link" href="../InventarioProductos?action=listar">Inventario</a></li>
+                    </ul>
+                </header>
+                <br><br><br><br>
+                
+                <!--   carusel de imagenes   -->
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="../resources/Image/tierra.jpeg" style=" width:100%">
+                        <br><br><br><br>
+                        <div class="guntsuletr">"Hecho a mano significa hecho con el corazón"</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="../resources/Image/gato.jpg" style="width:100%">
+                        <br><br><br><br>
+                        <div class="guntsuletr">"Hecho a mano significa hecho con el corazón"</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="../resources/Image/alebrije.jpg" style="width:100%">
+                        <br><br><br><br><br>
+                        <div class="guntsuletr">"Hecho a mano significa hecho con el corazón"</div>
+                    </div>
+                </div>
+                <br>
+
+                <div style="text-align:center">                 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                </div>
+
+                <script>
+                    let slideIndex = 0;
+                    showSlides();
+
+                    function showSlides() {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides");
+                        let dots = document.getElementsByClassName("dot");
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slideIndex++;
+                        if (slideIndex > slides.length) {
+                            slideIndex = 1
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " active";
+                        setTimeout(showSlides, 2000); // Change image every 2 seconds
+                    }
+                </script>
+                <br><br><br><br><br>
+            </div>
+        </section>
+        
+        <!--   pie de pagina   -->
+        <div class="footer">
+            <div class="inner-footer">
+                <div class="footer-items">
+                    <h1>AlebrijesShop</h1>
+                    <p>Productos artesanales de la Sierra Sur de Oaxaca.</p>
+                </div>
+            
+                <div class="footer-items">
+                    <h3>Contáctenos</h3>
+                    <div class="border1"></div>
+                    <div class="social-media">
+                        <a href="#"> <img src="../resources/Image/instagram1.png" alt="Instagram"><i class="fab fa-instagram">leoxis.x</i></a><br><br>
+                        <a href="#"> <img src="../resources/Image/facebook1.png" alt="Facebook"><i class="fab fa-facebook">@gmail.com</i></a><br><br>
+                        <a href="#"> <img src="../resources/Image/whatsapp1.png" alt="Watsapp"><i class="fab fa-google-plus-square">9513077200</i></a>
+                    </div> 
+                </div>
+            </div>
+            <div class="footer-bottom">
+                Copyright &copy; Art and Design 2022.
+            </div>
+    </body>
+</html>
